@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transactions>
+  <deposit account="1" amount="156.83">Payday!</deposit>
+  <withdrawal account="1" amount="50.00" />
+  <deposit account="2" amount="218.12" />
+  <withdrawal account="2" amount="20.00" />
+  <deposit account="3" amount="123.45" />
+  <withdrawal account="3" amount="100.00" />
+  <deposit account="4" amount="1022.51" />
+</transactions>

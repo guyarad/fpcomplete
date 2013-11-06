@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="transactions">
+      <zeroOrMore>
+        <choice>
+          <element name="deposit">
+            <ref name="info"/>
+          </element>
+          <element name="withdrawal">
+            <ref name="info"/>
+          </element>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </start>
+  <define name="info">
+    <attribute name="account">
+      <data type="positiveInteger"/>
+    </attribute>
+    <attribute name="amount">
+      <data type="decimal">
+        <param name="pattern">\d+.\d\d</param>
+      </data>
+    </attribute>
+    <text/>
+  </define>
+</grammar>
